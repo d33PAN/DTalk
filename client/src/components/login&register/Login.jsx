@@ -37,7 +37,7 @@ async function handleSubmit(e){
     <>
     <div className='login'>
         <div className="formWrapper">
-          <span className='logo'>JayChat</span>
+          <span className='logo'>JTalk</span>
           <span className='title'>Login</span>
           <form onSubmit={handleSubmit} >
             <input type="email" name="email" placeholder='email'

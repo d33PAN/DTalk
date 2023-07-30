@@ -73,7 +73,7 @@ uploadTask.on(
   return (
     <div className='register'>
         <div className="formWrapper">
-          <span className='logo'>JayChat</span>
+          <span className='logo'>JTalk</span>
           <span className='title'>Register</span>
           <form onSubmit={handleSubmit} >
             <input type="text" name="displayName"  placeholder='display name' 
