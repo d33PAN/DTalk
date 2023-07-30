@@ -24,7 +24,6 @@ function Login() {
   }
 async function handleSubmit(e){
   e.preventDefault();
-  console.log(userDetails);
   try {
    await signInWithEmailAndPassword(auth, userDetails.email, userDetails.password);
    navigate("/")
