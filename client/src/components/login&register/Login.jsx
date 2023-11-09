@@ -24,7 +24,6 @@ function Login() {
   }
 async function handleSubmit(e){
   e.preventDefault();
-  console.log(userDetails);
   try {
    await signInWithEmailAndPassword(auth, userDetails.email, userDetails.password);
    navigate("/")
@@ -38,7 +37,7 @@ async function handleSubmit(e){
     <>
     <div className='login'>
         <div className="formWrapper">
-          <span className='logo'>JayChat</span>
+          <span className='logo'>JTalk</span>
           <span className='title'>Login</span>
           <form onSubmit={handleSubmit} >
             <input type="email" name="email" placeholder='email'

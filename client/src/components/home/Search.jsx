@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import "./home.css";
 import { collection, query, where,getDoc,getDocs, setDoc, doc, updateDoc, serverTimestamp } from "firebase/firestore";
 import {AuthenticationContext} from "../../context/AuthenticationContext"
@@ -68,6 +68,15 @@ async function handleSelect(){
   function handleKey(e){
     e.code === "Enter" && handleSearch()
   }
+  useEffect(() => {
+    let subs = true;
+    subs && handleSearch();
+  
+    return () => {
+      subs = false;
+    }
+  }, [username]);
+  
   return (
     <div className='search'>
       <div className="searchForm">

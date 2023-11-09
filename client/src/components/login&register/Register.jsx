@@ -36,7 +36,6 @@ async function handleSubmit(e){
 
     const res =await createUserWithEmailAndPassword(auth,userDetails.email,userDetails.password);
 
-    console.log(res)
 
 const storageRef = ref(storage, displayName);
 
@@ -47,7 +46,6 @@ uploadTask.on(
  (error) => {
   setError(true)
   if(error){
-    console.log("error due to 40")
   }
   }, 
  () => {
@@ -70,13 +68,12 @@ uploadTask.on(
 );
   } catch (error) {
     setError(true);
-    console.log(error)
   }
 }
   return (
     <div className='register'>
         <div className="formWrapper">
-          <span className='logo'>JayChat</span>
+          <span className='logo'>JTalk</span>
           <span className='title'>Register</span>
           <form onSubmit={handleSubmit} >
             <input type="text" name="displayName"  placeholder='display name' 
